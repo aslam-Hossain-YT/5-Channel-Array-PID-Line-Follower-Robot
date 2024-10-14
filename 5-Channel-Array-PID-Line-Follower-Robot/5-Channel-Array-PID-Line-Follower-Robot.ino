@@ -96,8 +96,8 @@ void PID_LINE_FOLLOW() {
       }
     }
 
-    if (s[0] && !s[4]) t = 'l';
-    if (s[4] && !s[0]) t = 'r';
+    if (s[4] == 1 && s[0] == 0) t = 'l';
+    if (s[4] == 0 && s[0] == 1) t = 'r';
 
     else if (total == 5) { 
       Sensor_reading();
